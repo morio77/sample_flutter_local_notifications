@@ -27,5 +27,8 @@ class NotificationsUtils {
   static Future<void> scheduleNotifications() async {}
 
   // 通知をキャンセル
-  static Future<void> cancelNotificationsSchedule() async {}
+  static Future<void> cancelNotificationsSchedule() async {
+    final flnp = FlutterLocalNotificationsPlugin();
+    await flnp.cancelAll();
+  }
 }
