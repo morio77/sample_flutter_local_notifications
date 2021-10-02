@@ -71,7 +71,9 @@ class MyHomePage extends StatelessWidget {
             // 通知をスケジュール
             TextButton(
               onPressed: () {
-                NotificationsUtils.scheduleNotifications();
+                NotificationsUtils.scheduleNotifications(
+                  DateTime.now().add(const Duration(seconds: 3)),
+                );
               },
               child: const Text('通知をスケジュール'),
             ),
